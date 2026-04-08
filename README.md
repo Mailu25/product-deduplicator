@@ -13,8 +13,8 @@ These are all the same product. A fuzzy matching algorithm that compares strings
 
 ## How It Works
 
-1. Send all product names to Claude with a prompt asking it to normalize them into a consistent English format.
-2. Group by the normalized name and keep the lowest price.
+1. Send all product names to Claude with a prompt asking it to normalize them into a consistent English format — translating Hebrew, expanding abbreviations, and using a fixed [Brand] [Series] [Model] structure. Products that refer to the same item must get the exact same canonical name. The response is requested as a JSON array to make parsing straightforward.
+2. Group by the canonical name and keep the lowest price.
 
 ## Setup
 
